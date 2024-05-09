@@ -1,4 +1,5 @@
 use crate::*;
+use quarry_mint_wrapper::program::QuarryMintWrapper;
 
 pub fn handler(ctx: Context<ClaimRewardsV2>) -> Result<()> {
     let miner = &mut ctx.accounts.claim.miner;
@@ -105,7 +106,7 @@ pub struct ClaimRewardsV2<'info> {
     #[account(mut)]
     pub mint_wrapper: Box<Account<'info, quarry_mint_wrapper::MintWrapper>>,
     /// Mint wrapper program.
-    pub mint_wrapper_program: Program<'info, quarry_mint_wrapper::program::QuarryMintWrapper>,
+    pub mint_wrapper_program: Program<'info, QuarryMintWrapper>,
     /// [quarry_mint_wrapper::Minter] information.
     #[account(mut)]
     pub minter: Box<Account<'info, quarry_mint_wrapper::Minter>>,

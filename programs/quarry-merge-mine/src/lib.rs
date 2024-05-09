@@ -20,6 +20,8 @@ use anchor_lang::prelude::*;
 use anchor_spl::token::{Mint, Token, TokenAccount};
 use vipers::prelude::*;
 
+use quarry_mine::program::QuarryMine;
+use quarry_mint_wrapper::program::QuarryMintWrapper;
 pub use state::*;
 
 #[cfg(not(feature = "no-entrypoint"))]
@@ -261,7 +263,7 @@ pub struct InitMiner<'info> {
     pub payer: Signer<'info>,
 
     /// The program at [quarry_mine::ID].
-    pub mine_program: Program<'info, quarry_mine::program::QuarryMine>,
+    pub mine_program: Program<'info, QuarryMine>,
 
     /// System program.
     pub system_program: Program<'info, System>,
@@ -302,7 +304,7 @@ pub struct ClaimRewards<'info> {
     #[account(mut)]
     pub mint_wrapper: Box<Account<'info, quarry_mint_wrapper::MintWrapper>>,
     /// Mint wrapper program.
-    pub mint_wrapper_program: Program<'info, quarry_mint_wrapper::program::QuarryMintWrapper>,
+    pub mint_wrapper_program: Program<'info, QuarryMintWrapper>,
     /// [quarry_mint_wrapper::Minter].
     #[account(mut)]
     pub minter: Box<Account<'info, quarry_mint_wrapper::Minter>>,
@@ -402,7 +404,7 @@ pub struct QuarryStake<'info> {
     pub token_program: Program<'info, Token>,
 
     /// [quarry_mine] program.
-    pub mine_program: Program<'info, quarry_mine::program::QuarryMine>,
+    pub mine_program: Program<'info, QuarryMine>,
 }
 
 /// Error Codes

@@ -1,4 +1,5 @@
 use crate::*;
+use quarry_mine::program::QuarryMine;
 
 pub fn handler(ctx: Context<CreateOperator>) -> Result<()> {
     let operator = &mut ctx.accounts.operator;
@@ -54,7 +55,7 @@ pub struct CreateOperator<'info> {
     /// [System] program.
     pub system_program: Program<'info, System>,
     /// Quarry mine
-    pub quarry_mine_program: Program<'info, quarry_mine::program::QuarryMine>,
+    pub quarry_mine_program: Program<'info, QuarryMine>,
 }
 
 impl<'info> Validate<'info> for CreateOperator<'info> {

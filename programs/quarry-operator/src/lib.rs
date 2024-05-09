@@ -13,6 +13,7 @@ mod macros;
 mod state;
 
 use instructions::*;
+use quarry_mine::program::QuarryMine;
 pub use state::*;
 
 declare_id!("QoP6NfrQbaGnccXQrMLUkog2tQZ4C1RFgJcwDnT8Kmz");
@@ -233,7 +234,7 @@ pub struct WithDelegate<'info> {
     )]
     pub rewarder: Account<'info, Rewarder>,
     /// Quarry mine
-    pub quarry_mine_program: Program<'info, quarry_mine::program::QuarryMine>,
+    pub quarry_mine_program: Program<'info, QuarryMine>,
 }
 
 impl<'info> WithDelegate<'info> {
