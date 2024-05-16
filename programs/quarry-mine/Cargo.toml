@@ -28,7 +28,7 @@ num-traits = "0.2.14"
 quarry-mint-wrapper = { path = "../quarry-mint-wrapper", features = ["cpi"], version = "5.3.0" }
 solana-security-txt = "1.0.1"
 spl-math = { version = "0.1.0", features = ["no-entrypoint"] }
-u128 = "0.1.0"
+u128 = { git = "https://github.com/stabbleorg/u128" }
 vipers = { git = "https://github.com/stabbleorg/vipers", branch = "anchor-v0.30.0" }
 
 [dev-dependencies]

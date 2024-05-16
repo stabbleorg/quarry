@@ -2716,10 +2716,9 @@ checksum = "42ff0bf0c66b8238c6f3b578df37d0b7848e55df8577b3f74f92a69acceeb825"
 [[package]]
 name = "u128"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ba924bf1e6b59ea8f1bbb8c7c5998fbc22c6a544e34446ee336f693ea86ccef3"
+source = "git+https://github.com/stabbleorg/u128#a70f7439ffcd8eeb109b4f2d445bab52fcee1c34"
 dependencies = [
- "uint 0.9.1",
+ "uint 0.9.5",
 ]
 
 [[package]]
@@ -2736,9 +2735,9 @@ dependencies = [
 
 [[package]]
 name = "uint"
-version = "0.9.1"
+version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6470ab50f482bde894a037a57064480a246dbfdd5960bd65a44824693f08da5f"
+checksum = "76f64bba2c53b04fcab63c01a7d7427eadc821e3bc48c34dc9ba29c501164b52"
 dependencies = [
  "byteorder",
  "crunchy",
