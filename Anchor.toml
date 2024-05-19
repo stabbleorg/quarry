@@ -3,7 +3,8 @@ anchor_version = "0.30.0"
 solana_version = "1.18.14"
 
 [features]
-seeds = true
+resolution = false
+skip-lint = false
 
 [scripts]
 test = "yarn mocha -b"
