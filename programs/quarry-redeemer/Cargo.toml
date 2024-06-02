@@ -14,7 +14,7 @@ crate-type = ["cdylib", "lib"]
 name = "quarry_redeemer"
 
 [features]
-default = []
+default = ["cpi"]
 cpi = ["no-entrypoint"]
 no-entrypoint = []
 no-idl = []
